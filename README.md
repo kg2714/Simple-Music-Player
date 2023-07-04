@@ -1,4 +1,4 @@
-# Simple Music Player using React
+# Simple Music Player using Electron
 
 ## Framework used
 
