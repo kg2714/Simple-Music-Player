@@ -1,5 +1,6 @@
 const store = require("store2")
 const fs = require("fs")
+const Path = require("path")
 
 var bgPath = ""
 var audio = new Audio()
@@ -29,6 +30,7 @@ if (fs.existsSync(store.get("bgPath"))) {
 
 if (store.get("lastMusicPlayed")) {
   audio = new Audio(store.get("lastMusicPlayed"))
+  name.textContent = Path.basename(audio.src)
   audio.load()
 } else {
   alert("Can't found last played music. Please choose another.")
